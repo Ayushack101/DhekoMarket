@@ -37,7 +37,7 @@ const AllBusiness = () => {
   }
   return (
     <>
-      <TailwindHeader />
+      {/* <TailwindHeader /> */}
       <CategoryStrip businesses={allBusinesses} />
       <section className="text-gray-600 body-font">
         <div className="about-b-card mt-8 px-10 mx-auto mb-10">

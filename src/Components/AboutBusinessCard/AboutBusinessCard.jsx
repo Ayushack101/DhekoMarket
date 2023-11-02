@@ -1,18 +1,26 @@
 // This is first commit
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import InputStarRatingCard from "../InputStarRatingCard/InputStarRatingCard";
 import "./AboutBusinessCard.css";
+import ReviewCard from "../ReviewCard/ReviewCard";
+import { useParams } from "react-router-dom";
+import "./AboutBusinessCard.css"
 
 const AboutBusinessCard = ({ product }) => {
   // State Management
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     designation: "",
     rating: 0,
     review: "",
   });
+  const [data, setData] = useState();
+  const [banner, setBanner] = useState();
+  const [Product, setProduct] = useState();
+  const [loading, setLoading] = useState(true);
 
   // Toggle Model
   const openModal = () => {
@@ -56,6 +64,46 @@ const AboutBusinessCard = ({ product }) => {
     };
     submitReview();
   };
+
+  // Take id from Parameter
+  const { id } = useParams();
+
+  // Fetch Business By Id Api Call
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await Axios.get(
+          `https://dekhomarket.com/apis/fetchBusinessById.php?business_id=${id}`
+        );
+        if (response.status === 200) {
+          setProduct(response?.data?.data);
+          setBanner(response?.data?.data?.banners?.[0]);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [id]);
+
+  useEffect(() => {
+    const apifetch = async () => {
+      try {
+        const response = await Axios.get(
+          `https://dekhomarket.com/apis/reviews-graph-api.php?business_id=${id}`
+        );
+        if (response.status === 200) {
+          setData(response?.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    apifetch();
+  }, []);
+
   return (
     <>
       <section className="text-gray-600 body-font ">
@@ -130,7 +178,13 @@ const AboutBusinessCard = ({ product }) => {
                   >
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
-                  <span className="text-gray-600 ml-3">4 Reviews</span>
+                  <span
+                    className="text-gray-600 ml-3"
+                    onClick={() => setShowPopup(true)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    4 Reviews
+                  </span>
                 </span>
                 <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                   <a className="text-gray-500">
@@ -175,7 +229,6 @@ const AboutBusinessCard = ({ product }) => {
               <div className="flex mt-6 items-center pb-3 border-b-2 border-gray-100 mb-3">
                 <div className="flex">
                   <span className="pr-3 uppercase border-r border-gray-300">
-                    {" "}
                     {product.address}
                   </span>
                 </div>
@@ -246,6 +299,28 @@ const AboutBusinessCard = ({ product }) => {
                         />
                         <button type="submit">Submit</button>
                       </form>
+                    </div>
+                  </div>
+                )}
+                {showPopup && (
+                  <div
+                    className="relative z-10"
+                    aria-labelledby="modal-title"
+                    role="dialog"
+                    aria-modal="true"
+                  >
+                    <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+                    <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                      <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                        <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-[60%] p-6">
+                          <div
+                            className="max-h-[500px] overflow-y-auto no-scrollbar"
+                          >
+                            <ReviewCard product={Product} data={data} setShowPopup={setShowPopup}/>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
