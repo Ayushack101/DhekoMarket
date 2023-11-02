@@ -1,0 +1,194 @@
+.herosection {
+  height: 100vh;
+  padding: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  /* Set the background image */
+  background-image: url("https://img.freepik.com/premium-photo/air-conditioner-service-indoors-air-conditioner-cleaning-technician-he-opened-front-cover-took-out-filters-washed-it-he-uniform-wearing-rubber-mask_208349-1339.jpg");
+}
+
+.herosection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value for transparency */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Inter;
+  text-decoration: underline;
+  cursor: pointer;
+  text-underline-offset: 4px;
+  color: rgb(57, 71, 118);
+}
+
+.searchbar input {
+  position: relative;
+  width: 100%;
+  color: rgb(32, 41, 69);
+  background: rgb(255, 255, 255);
+  border-radius: 2rem;
+  border: 1px solid rgb(222, 224, 247);
+  transition: border 0.2s ease 0s;
+  margin: 24px 0px 0px;
+  box-shadow: none;
+  height: 48px;
+  padding-left: 30px;
+  z-index: 1;
+  font-size: 1.3vw;
+}
+
+.searchbar img {
+  margin-left: -40px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.herologo {
+  width: 40vw;
+}
+
+.serviceprovides {
+  display: flex;
+  z-index: 999;
+  color: white;
+}
+
+.serviceprovides i {
+  color: white;
+}
+
+.link-no-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.containertitle {
+  color: white;
+}
+
+.market {
+  font-size: 90px;
+  color: white;
+  z-index: 999;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.custom-input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.suggest {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .searchbar {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 732px) {
+  .suggest {
+    width: 100%;
+  }
+  .search-suggestions {
+    width: 100%;
+  }
+  .searchbar input {
+    font-size: 3vw;
+  }
+  .market {
+    font-size: 40px;
+  }
+}
+
+.logincard {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid silver;
+  display: flex;
+  flex-direction: column;
+  z-index: 1999;
+}
+
+.loginbottom {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logintop {
+  height: 100px;
+  background: silver;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.circular {
+  position: absolute;
+  top: 70px;
+  width: 60px;
+  height: 60px;
+  left: 115px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 2px solid white;
+  background-color: silver;
+  color: white;
+}
+
+.inner {
+  border: 1px solid silver;
+  width: 100%;
+  height: 70%;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}

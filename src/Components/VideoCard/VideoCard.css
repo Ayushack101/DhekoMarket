@@ -1,0 +1,74 @@
+.videocard {
+  width: 100%;
+  height: 370px;
+  background-image: url("https://www.mordecor.in/wp-content/uploads/2019/07/aesthetic-l-sofa-f-600x544.jpg");
+}
+
+#playbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.video-container {
+  position: relative;
+}
+
+/* VideoCard.css */
+
+/* Styles for the play/pause button */
+.play-button {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.play-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 0 15px 0 0;
+  border-color: transparent transparent transparent white;
+  transition: transform 0.3s;
+}
+
+/* Styles for the play button (when video is paused) */
+.play-button:not(.playing)::before {
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Styles for the pause button (when video is playing) */
+.play-button.playing::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 30px;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.play-button.playing::before::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 30px;
+  background-color: white;
+}

@@ -1,0 +1,36 @@
+/* SearchSuggestions.css */
+.search-suggestions {
+    position: relative;
+  }
+  
+  .custom-input {
+    /* Your input styles here */
+  }
+  
+  .suggestion-card {
+    position: absolute;
+    top: 102%;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    max-height: auto;
+    overflow-y: auto;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  

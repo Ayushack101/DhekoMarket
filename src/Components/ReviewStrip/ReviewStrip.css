@@ -1,0 +1,40 @@
+
+.reviewstrip {
+  width: 100%;
+  height: 65px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+
+.reviewstrip span {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.reviewstrip a {
+  text-decoration: none;
+  color: black;
+}
+
+.reviewstrip a:hover {
+  color: silver;
+  text-decoration: underline;
+}
+
+/* Style for the active link */
+.active-link span,
+.active-link a {
+  color: silver;
+  text-decoration: underline;
+}
+
+@media (max-width:900px){
+  .reviewstrip{
+    height: auto;
+    padding: 30px;
+  }
+}

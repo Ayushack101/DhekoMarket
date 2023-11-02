@@ -1,0 +1,60 @@
+.upcomingproduct {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-image: url("https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80");
+  }
+  
+.upcomingproductcontent{
+    width: 75%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+  
+.upcomingproductcontent span:nth-child(1){
+    font-size: 45px;
+    font-weight: 600;
+}
+
+
+.upcomingproductcontent span:nth-child(3){
+    width: 110px;
+    height: 40px;
+    padding: 10px;
+    border:1px solid white;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upcomingproductcontent span:nth-child(3) a{
+    text-decoration: none !important;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .upcomingproduct{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upcomingproductcontent{
+        width: 100%;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .upcomingproduct img{
+        width: 100%;
+    }
+}

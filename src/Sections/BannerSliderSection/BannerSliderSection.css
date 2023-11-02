@@ -1,0 +1,8 @@
+.slider-container{
+    height: 50vh;
+  }
+
+  .rsis-image {
+    background-size: cover !important;
+    background-repeat: repeat !important;
+  }

@@ -1,0 +1,30 @@
+.herocategorysection{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+}
+
+.category_stripcard{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.category_stripcard img{
+    width: 60px;
+}
+
+.description{
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 16px;
+    color: #212121;
+    text-align: center;
+}

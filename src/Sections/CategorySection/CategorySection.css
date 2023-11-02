@@ -1,0 +1,76 @@
+.category{
+    padding: 40px 80px 40px 80px;
+    display: flex;
+    height: auto;
+}
+
+.category_left{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.category_right {
+    padding-left: 50px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+  }
+
+  .prevbutton{
+    width: 60px;
+    height: 40px;
+    border-radius: 12px;
+
+  }
+  .nextbutton{
+    width: 60px;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .pagination{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .categoriesTypes{
+    padding-left: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+  }
+/* Media queries for Category Section */
+  @media (max-width:900px) {
+    .category{
+        flex-direction: column;
+    }
+    .category_right{
+        width: 100%;
+    }
+    .category_left{
+        flex-direction:row;
+        width: 100%;
+    }
+    .aboutmarket{
+        width: 45%;
+    }
+    .downloadappcard{
+        width: 45%;
+    }
+  }
+
+  @media (max-width:560px){
+    .category_left{
+        flex-direction: column;
+    }
+  }
+
+  

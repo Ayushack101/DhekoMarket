@@ -1,0 +1,67 @@
+.serviceweprovide {
+    background-color: #eaeaea;
+    padding: 20px 0px 50px 0px;
+    text-align: center;
+  }
+  
+  .serviceprovide {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .descript {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .descriptcards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .descriptcard {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    max-width: 300px; 
+    cursor: pointer;
+  }
+ 
+  .descriptcard:hover{
+    padding: 15px;
+  }
+  
+  .card-icon {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .descriptcard {
+      width: 100%; /* Cards take 100% width on smaller screens */
+      max-width: none;
+    }
+  }
+  

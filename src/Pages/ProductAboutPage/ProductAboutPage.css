@@ -1,0 +1,56 @@
+.relevantproducts {
+  width: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 130px 50px 130px;
+  /* gap: 40px; */
+}
+
+.relevantheadings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.relevantheading {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.relevantsubheading {
+  font-size: 18px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.weekproducts {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .relevantproducts {
+    padding: 50px;
+  }
+  .relevantheading {
+    font-size: 20px;
+  }
+  .relevantsubheading {
+    font-size: 16px;
+  }
+  .weekproducts {
+    flex-direction: column;
+    width: 100%;
+  }
+  .relevantproductcard {
+    width: 100%;
+  }
+}

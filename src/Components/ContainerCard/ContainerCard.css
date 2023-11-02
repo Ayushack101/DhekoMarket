@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 20px;
+  z-index: 1999;
+  cursor: pointer;
+}
+.containerimg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid silver;
+  background-color: white;
+}

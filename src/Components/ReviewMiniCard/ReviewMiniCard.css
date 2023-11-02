@@ -1,0 +1,27 @@
+.reviewminicard{
+    width: 31%;
+    height:auto;
+    color: auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reviewtitle{
+    font-size: 25px;
+    font-weight: 500px;
+    color: black;
+}
+
+.reviewsubtitle{
+    font-size: 17px;
+    font-weight: 400px;
+    color: black;
+}
+
+.reviewminicardcontent{
+    color: black;
+    font-size: 15px;
+}

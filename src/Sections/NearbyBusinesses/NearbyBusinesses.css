@@ -1,0 +1,17 @@
+.nearbybusinesses{
+    width: 100%;
+    background-color: #f1f1f1;
+    height: auto;
+    height: 30vh;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+  }
+  
+  
+  

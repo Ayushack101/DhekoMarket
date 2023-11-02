@@ -1,0 +1,28 @@
+.producttypecard{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid #CECECE;
+
+}
+
+.producttypecard .cardimg img{
+    width: 100px;
+}
+
+.cardHeading{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cardselected{
+    border: 1px solid red;
+    width: 25px;
+}
+

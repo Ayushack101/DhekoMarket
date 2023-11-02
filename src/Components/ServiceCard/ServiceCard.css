@@ -1,0 +1,30 @@
+.Servicecard{
+    width: 300px;
+    height:auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.Servicecard i{
+    font-size: 70px;
+}
+
+.mobile{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.more{
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}

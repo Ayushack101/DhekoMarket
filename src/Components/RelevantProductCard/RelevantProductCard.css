@@ -1,0 +1,40 @@
+.relevantproductcard {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  /* gap: 20px; */
+  align-items: center;
+  cursor: pointer;
+}
+
+.relevantproductcard img {
+  width: 100%;
+  height: 350px;
+}
+
+.weekproducttitle span a {
+  text-decoration: none;
+  color: black;
+}
+
+.relevantproductcard span:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.weekproducttitle span:nth-child(1) {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.weekproducttitle span:nth-child(2) {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .relevantproductcard {
+    width: 100%;
+  }
+}

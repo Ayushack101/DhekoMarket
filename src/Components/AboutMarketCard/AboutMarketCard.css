@@ -1,0 +1,49 @@
+.aboutmarket{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    padding-top: 40px;
+    background-color:  #F8F9FA;
+    padding: 10px;
+}
+
+.aboutmarket_left{
+    width: 100%;
+}
+
+.aboutmarket_left img{
+    width: 100%;
+   height: auto;
+}
+
+.aboutmarket_right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutmarket_right span:nth-child(2){
+      color: #36c;
+      font-size: 17px;
+      font-weight: 500;
+}
+
+.aboutmarket_right span:nth-child(2):hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Media queries for about card */
+@media (max-width:900px) {
+    .aboutmarket{
+        width: 45%;
+    }
+  }
+
+  @media (max-width:560px) {
+    .aboutmarket{
+        width: 100%;
+    }
+  }

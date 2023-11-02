@@ -1,0 +1,114 @@
+.contentwrapper {
+  width: 100%;
+  height: 500px;
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.contentwrapper_left {
+  flex: 1;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+}
+
+.contentwrapper_right {
+  flex: 1;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+}
+
+.contentwrapper_left img {
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dekhomarket_heading {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.dekhomarket_heading2 {
+  font-size: 20px;
+  font-weight: 300px;
+  font-family: sans-serif;
+}
+
+.form-group input {
+  border: none;
+  outline: none;
+  color: green;
+}
+
+.form-group input:focus {
+  border: 2px solid #427bff;
+}
+
+.form-group .form-textarea {
+  border: none;
+  outline: none;
+  color: green;
+}
+
+.form-group .form-textarea:focus {
+  border: 2px solid #427bff;
+}
+
+.form-container {
+  position: relative;
+}
+
+.form-label {
+  color: #427bff !important;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  left: 42%;
+  bottom: 35%;
+  position: absolute;
+  background-color: white; 
+  width: 300px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  
+}
+
+
+.cancelbtn{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.enqspan{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: green;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+  }
