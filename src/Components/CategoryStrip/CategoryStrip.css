@@ -1,14 +1,20 @@
 .categorystrip {
-  /* border-radius: 8px; */
-  width: 100%;
+  max-width: 85%;
+  /* background-color: antiquewhite; */
+  margin: auto;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
-  /* background-color: gray; */
-  /* box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.08); */
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.categorystrip::-webkit-scrollbar {
+  display: none;
 }
 
 .categorystrip a {
@@ -32,6 +38,7 @@
   line-height: 1px;
   font-weight: 500;
   color: rgb(17 24 39);
+  white-space: nowrap;
 }
 
 .category_stripcard img {
@@ -44,7 +51,7 @@
   border-radius: 8px;
 }
 
-.category_buttons_button1 {
+/* .category_buttons_button1 {
   font-size: 16px;
   color: black;
   border: none;
@@ -53,23 +60,43 @@
   margin: 0 10px;
   cursor: pointer;
   position: absolute;
-  left: 95px;
+  left: 100px;
+} */
+.category_buttons_button1 {
+  background: linear-gradient(90deg, #fff 70%, transparent);
+  position: absolute;
+  left: 100px;
 }
 
-.category_buttons_button1:hover {
+.category_buttons_button1 i {
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.category_buttons_button1 i:hover {
   background-color: #f1efef;
 }
 
 .category_buttons_button2 {
+  background: linear-gradient(90deg, #fff 70%, transparent);
+  position: absolute;
+  right: 100px;
+}
+.category_buttons_button2 i {
   font-size: 16px;
   color: black;
   border: none;
-  border-radius: 60%;
-  padding: 8px 15px;
-  margin: 0 10px;
+  border-radius: 50%;
+  padding: 12px 15px;
   cursor: pointer;
-  position: absolute;
-  right: 95px;
+}
+
+.category_buttons_button2 i:hover {
+  background-color: #f1efef;
 }
 
 .category_buttons_button2:hover {
@@ -95,4 +122,87 @@
   .categorystrip {
     padding: 10px;
   }
+}
+
+/* AAA */
+.wrapper {
+  padding-top: 35px;
+  position: relative;
+  max-width: 85%;
+  margin: auto;
+  background: #fff;
+  border-radius: 13px;
+}
+
+.wrapper .icon {
+  padding-top: 35px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  /* width: 120px; */
+  display: flex;
+  align-items: center;
+}
+.icon:first-child {
+  left: 0;
+  /* display: none; */
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+.icon i:hover {
+  background: #efedfb;
+}
+.icon:first-child i {
+  /* margin-left: 15px; */
+}
+.icon:last-child i {
+  margin-right: 15px;
+}
+.wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.wrapper .tabs-box::-webkit-scrollbar {
+  display: none;
+}
+.tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+  background: #f5f4fd;
+  padding: 7px 12px;
+  border-radius: 30px;
+  border: 1px solid #d8d5f2;
+}
+.tabs-box .tab:hover {
+  background: #efedfb;
+}
+.tabs-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+.tabs-box .tab.active {
+  color: #fff;
+  background: #5372f0;
+  border-color: transparent;
 }

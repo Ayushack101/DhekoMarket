@@ -40,6 +40,7 @@ const App = () => {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setUserLocation({ latitude, longitude });
+          console.log(latitude);
         },
         (error) => {
           console.error("Error getting user's location:", error);
@@ -84,6 +85,7 @@ const App = () => {
   useEffect(() => {
     getUserLocation();
   }, []);
+  console.log(userLocation);
 
   console.log(userLocation)
 
@@ -96,7 +98,7 @@ const App = () => {
               path="/allbusiness"
               element={
                 <>
-                  <AllBusiness />
+                  <AllBusiness userLocation={userLocation} />
                 </>
               }
             />
