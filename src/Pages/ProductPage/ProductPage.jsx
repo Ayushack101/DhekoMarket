@@ -16,7 +16,6 @@ const ProductPage = ({
   const [loading, setLoading] = useState(true);
 
   userLocation.business_name = businessName;
-  console.log(businesses);
 
   useEffect(() => {
     const fetchData = async () => {
