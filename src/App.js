@@ -87,6 +87,8 @@ const App = () => {
   }, []);
   console.log(userLocation);
 
+  console.log(userLocation)
+
   return (
     <>
       <div className={darkMode ? "app dark" : "app"}>
