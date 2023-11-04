@@ -12,6 +12,7 @@ import MainBannerCard from "../../Components/MainBannerCard/MainBannerCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AboutBusinessCard from "../../Components/AboutBusinessCard/AboutBusinessCard";
 import ServicesSection from "../../Sections/ServicesSection/ServicesSection";
+import PhotosGallery from "../../Sections/PhotosGallery/PhotosGallery";
 // import TailwindHeader from "../../Components/TailwindHeader/TailwindHeader";
 
 const ProductAboutPage = () => {
@@ -74,16 +75,17 @@ const ProductAboutPage = () => {
         </div>
       ) : (
         <>
-          {/* <MainBannerCard imageUrl={banner} />
-          <ReviewStrip /> */}
+          <MainBannerCard imageUrl={banner} product={product} />
+          {/* <ReviewStrip /> */}
           {/* <TailwindHeader /> */}
           <AboutBusinessCard product={product} />
           <ServicesSection SubHeading={"BUSINESSES"} businesses={businesses} />
           {/* <BuissnessOverviewSection Business={product} /> */}
           {/* <ProductSection SubHeading={"BUSINESSES"} Businesses={businesses} /> */}
           <UpcomingProductCard RelevantBusinesses={RelevantBusinesses} />
-          <RelevantProductSection RelevantBusinesses={RelevantBusinesses} />
           {/* <OverviewreviewSection product={product} /> */}
+          <PhotosGallery product={product} />
+          <RelevantProductSection RelevantBusinesses={RelevantBusinesses} />
         </>
       )}
     </>
