@@ -16,7 +16,7 @@ const UpcomingProductCard = ({ RelevantBusinesses }) => {
     //   </div>
     // </div>
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font" >
         <div className="w-[85%] mt-[70px] px-10 mx-auto">
           <h3 className="font-semibold text-3xl text-black capitalize">
             Upcomming Services

@@ -108,7 +108,7 @@ const AboutBusinessCard = ({ product }) => {
     <>
       <section className="text-gray-600 body-font ">
         <div className="flex justify-center mt-[70px] ">
-          <div className="w-[85%] flex justify-center items-center flex-wrap  px-10 ">
+          <div className="w-[100%] flex justify-center items-center flex-wrap  px-10 ">
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-96 h-72 object-cover object-center rounded"
@@ -310,7 +310,6 @@ const AboutBusinessCard = ({ product }) => {
                     aria-modal="true"
                   >
                     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
                     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                       <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                         <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-[60%] p-6">
