@@ -13,13 +13,18 @@ const BusinessProfileModal = ({ setOpen }) => {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-[52rem]">
             <div className="bg-white px-4 pb-4 pt-4 sm:p-6 sm:pb-4 max-h-[500px] overflow-y-auto no-scrollbar">
-       
-            <i class="fa-solid fa-square-xmark" style={{
-              position:"absolute",
-              right:20,
-              fontSize:25,
-              color:"#3F83F8"
-            }} onClick={setOpen(false)}></i>
+              <i
+                class="fa-solid fa-square-xmark"
+                style={{
+                  position: "absolute",
+                  right: 20,
+                  fontSize: 25,
+                  color: "#3F83F8",
+                }}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              ></i>
 
               <div class="overflow-hidden">
                 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-8">

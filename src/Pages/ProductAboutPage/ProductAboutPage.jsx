@@ -78,13 +78,11 @@ const ProductAboutPage = () => {
         </div>
       ) : (
         <>
-      
-   
-          <TailwindHeader />
-        <MainBannerCard imageUrl={banner} product={product} />
+          {/* <TailwindHeader /> */}
+          <MainBannerCard imageUrl={banner} product={product} />
 
           <AboutBusinessCard product={product} />
-          <BusinessProfileSection/>
+          <BusinessProfileSection />
           <ServicesSection SubHeading={"BUSINESSES"} businesses={businesses} />
           {/* <BuissnessOverviewSection Business={product} /> */}
           {/* <ProductSection SubHeading={"BUSINESSES"} Businesses={businesses} /> */}
